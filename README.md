@@ -15,12 +15,12 @@ pip install requests
 pip install tqdm
 ```
 
-**4. 启动**
+**4. 启动**<br>
 在文件夹内打开终端，执行以下命令即可运行
 ```bash
 python main.py
 ```
-<br>**或**<br>
+**或**<br>
 在文件夹内新建.bat文件，粘贴以下代码并保存
 ```bash
 @echo off
