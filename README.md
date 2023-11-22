@@ -1,10 +1,10 @@
 ![效果图](https://ali.mu-jie.cc/img/20231106202650.png)
 
 ### 使用
-**1. 新建文件夹**
-**2. 将main.py文件放入新建的文件夹**
+**1. 新建文件夹**<br>
+**2. 将main.py文件放入新建的文件夹**<br>
 **3. 在文件夹内打开终端，安装所需的包**
-```requests``` 和 ```tqdm```
+```requests``` 和 ```tqdm```<br>
 不知道是否已经安装过？执行以下命令可检测是否已经安装了该包
 ```bash
 pip show 包名
@@ -20,7 +20,7 @@ pip install tqdm
 ```bash
 python main.py
 ```
-**或**
+<br>**或**<br>
 在文件夹内新建.bat文件，粘贴以下代码并保存
 ```bash
 @echo off
