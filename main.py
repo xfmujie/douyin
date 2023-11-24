@@ -61,7 +61,9 @@ while(loop):
   if res['data']['title'] == '':
       title = f"无标题 - @{res['data']['author']}"
   else:
-      title = re.sub(r'[\\/:*?"<>|]', '', res['data']['title']).replace('\n', '')
+      title = re.sub(r'[\\/:*?"<>|]', '', res['data']['title']).replace('\n', '').replace('\t', '').replace('\r', '')
+      if len(title) > 50:
+          title = title[:50] + '…'
   cmd = input(GREEN + f'1: 下载{type}\n2: 返回解析\n其他: 退出\n请输入指令：' + RESET)
   if cmd == '1':
       if type == '视频':
