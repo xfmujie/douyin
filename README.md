@@ -29,4 +29,8 @@ pause
 ```
 保存后双击.bat文件即可运行
 
+### 补充：写了安卓端的APP，欢迎下载使用
+[点击下载](https://ali.mu-jie.cc/static/%E6%97%A0%E6%B0%B4%E5%8D%B0%E8%A7%A3%E6%9E%90.apk)
+![无水印解析APP](https://ali.mu-jie.cc/img/%E6%8B%BC%E5%9B%BE%E7%89%872134-a1a11ac5dae6272def2fcabdd8255da0_cd4318a5f544a314e98f726d5d71032a_d913b3c66827ce6da364f150f26ffb4d.jpeg)
+
 **PS: 仅供个人学习使用，请勿将无水印作品二次上传，由此引起的任何责任与本人无关；代码中用到了我的个人API，用来解析获取抖音作品的信息，API搭建代码暂不开放**
