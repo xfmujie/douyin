@@ -50,7 +50,7 @@ while(loop):
       exit()
 
   print(GREEN + '正在解析……' + RESET)
-  res = requests.get(f'https://api.mu-jie.cc/douyin?url={url}$&key={key}').json()
+  res = requests.get(f'https://api.mu-jie.cc/douyin?url={url}&key={key}').json()
   if res['code'] == 200:
     print(GREEN + f'\n{res["msg"]}' + RESET)
     print(GREEN + '标题：' + RESET + res['data']['title'])
