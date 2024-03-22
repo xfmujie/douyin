@@ -5,6 +5,11 @@ import json
 from tqdm import tqdm
 from urllib.parse import quote
 
+# 由于接口调用量大大上升，为了尽可能减少解析量从而降低接口被封的风险，接口已实行收费，
+# 有消费计划的开发者/用户可联系qq了解具体收费方式，对于普通用户来说，1元/月足以满足使用需求
+# 接口密钥，联系qq: 1960813545购买（备注: 抖音key）
+key = '***'
+
 RED = "\033[91m"
 GREEN = "\033[92m"
 YELLOW = "\033[93m"
@@ -45,14 +50,17 @@ while(loop):
       exit()
 
   print(GREEN + '正在解析……' + RESET)
-  res = requests.get(f'https://api.mu-jie.cc/douyin?url={url}').json()
-  print(GREEN + '\n解析成功！' + RESET)
-  print(GREEN + '标题：' + RESET + res['data']['title'])
-  print(GREEN + '作者：' + RESET + res['data']['author'])
-  print(GREEN + 'UID：' + RESET + res['data']['uid'])
-  print(GREEN + '日期：' + RESET + str(res['data']['time']))
-  print(GREEN + '点赞：' + RESET + str(res['data']['like']))
-  print(GREEN + '类型：' + RESET + res['data']['type'] + '\n')
+  res = requests.get(f'https://api.mu-jie.cc/douyin?url={url}$&key={key}').json()
+  if res['code'] == 200:
+    print(GREEN + f'\n{res["msg"]}' + RESET)
+    print(GREEN + '标题：' + RESET + res['data']['title'])
+    print(GREEN + '作者：' + RESET + res['data']['author'])
+    print(GREEN + 'UID：' + RESET + res['data']['uid'])
+    print(GREEN + '日期：' + RESET + str(res['data']['time']))
+    print(GREEN + '点赞：' + RESET + str(res['data']['like']))
+    print(GREEN + '类型：' + RESET + res['data']['type'] + '\n')
+  else:
+      print(RED + f'\n{res["msg"]}' + RESET)
 
   if res['data']['type'] == '视频':
     type = '视频'
